@@ -4,6 +4,7 @@
 
 **Method**: `GET`
 **Sample Response**:
+
 ```json
 [
   {
@@ -25,6 +26,7 @@
 
 **Method**: `GET`
 **Sample Response**:
+
 ```json
 [
   {
