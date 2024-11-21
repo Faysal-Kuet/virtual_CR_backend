@@ -2,7 +2,7 @@
 
 ### Route: `/api/ct-announcements`
 
-**Method**: `GET`
+**Method**: `GET` <br>
 **Sample Response**:
 
 ```json
@@ -24,7 +24,7 @@
 
 ### Route: `/api/notices`
 
-**Method**: `GET`
+**Method**: `GET`  <br>
 **Sample Response**:
 
 ```json
