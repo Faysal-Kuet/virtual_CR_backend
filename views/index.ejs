@@ -1,0 +1,132 @@
+<!-- views/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Class Management Dashboard</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="mn">
+    <h1>Class Management Dashboard</h1>
+    <div class="section">
+      <h2>Notices</h2>
+      <form action="/add-notice" method="POST">
+        <label for="notice_date">Date:</label>
+        <input type="date" name="date" id="notice_date" required>
+  
+        <label for="notice_day">Day:</label>
+        <select name="day" id="notice_day" required>
+          <% dropdownData.days.forEach(day => { %>
+            <option value="<%= day %>"><%= day %></option>
+          <% }) %>
+        </select>
+  
+        <label for="notice_time">Time:</label>
+        <input type="time" name="time" id="notice_time" required>
+  
+        <label for="notice_text">Notice:</label>
+        <textarea name="notice" id="notice_text" rows="3" required></textarea>
+  
+        <label for="pass">Pass</label>
+        <input type="password" name="pass" id="pass" required>
+  
+        <button type="submit">Add Notice</button>
+      </form>
+  
+      <h3>Existing Notices</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Day</th>
+            <th>Time</th>
+            <th>Notice</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% notices.forEach(notice => { %>
+            <tr>
+              <td><%= notice.date %></td>
+              <td><%= notice.day %></td>
+              <td><%= notice.time %></td>
+              <td><%= notice.notice %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  
+    <div class="section">
+      <h2>CT Announcements</h2>
+      <form action="/add-ct-announcement" method="POST">
+        <label for="ct_date">Date:</label>
+        <input type="date" name="date" id="ct_date" required>
+  
+        <label for="ct_day">Day:</label>
+        <select name="day" id="ct_day" required>
+          <% dropdownData.days.forEach(day => { %>
+            <option value="<%= day %>"><%= day %></option>
+          <% }) %>
+        </select>
+  
+        <label for="ct_time">Time:</label>
+        <input type="time" name="time" id="ct_time" required>
+  
+        <label for="ct_place">Place:</label>
+        <input type="text" name="place" id="ct_place" required>
+  
+        <label for="ct_course">Course:</label>
+        <select name="course_id" id="ct_course" required>
+          <% dropdownData.courses.forEach(course => { %>
+            <option value="<%= course.id %>"><%= course.name %></option>
+          <% }) %>
+        </select>
+  
+        <label for="ct_topic">Topic:</label>
+        <input type="text" name="topic" id="ct_topic" required>
+  
+        <label for="ct_teacher">Teacher:</label>
+        <select name="teacher_id" id="ct_teacher" required>
+          <% dropdownData.teachers.forEach(teacher => { %>
+            <option value="<%= teacher.id %>"><%= teacher.name %></option>
+          <% }) %>
+        </select>
+  
+        <label for="pass">Pass</label>
+        <input type="password" name="pass" id="pass" required>
+  
+        <button type="submit">Add CT Announcement</button>
+      </form>
+  
+      <h3>Existing CT Announcements</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Day</th>
+            <th>Time</th>
+            <th>Place</th>
+            <th>Course</th>
+            <th>Topic</th>
+            <th>Teacher</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% ctAnnouncements.forEach(ct => { %>
+            <tr>
+              <td><%= ct.date %></td>
+              <td><%= ct.day %></td>
+              <td><%= ct.time %></td>
+              <td><%= ct.place %></td>
+              <td><%= ct.course %></td>
+              <td><%= ct.topic %></td>
+              <td><%= ct.teacher %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div> 
+</body>    
+</html>
