@@ -3,7 +3,7 @@
 Simple Node.js server with Sqlite3 database to store and view CT announcements and Notices. <br>
 iOS App Frontend Repo - [Faysal-Kuet/virtual_CR: CSE 3218 Lab Assignment 1](https://github.com/Faysal-Kuet/virtual_CR)
 
-### Route: `/api/ct-announcements`
+- ### Route: `/api/ct-announcements`
 
 **Method**: `GET` <br>
 **Sample Response**:
@@ -25,7 +25,7 @@ iOS App Frontend Repo - [Faysal-Kuet/virtual_CR: CSE 3218 Lab Assignment 1](http
 ]
 ```
 
-### Route: `/api/notices`
+- ### Route: `/api/notices`
 
 **Method**: `GET`  <br>
 **Sample Response**:
@@ -43,7 +43,7 @@ iOS App Frontend Repo - [Faysal-Kuet/virtual_CR: CSE 3218 Lab Assignment 1](http
 ```
 
 
-### Route: `/add-ct-announcement`
+- ### Route: `/add-ct-announcement`
 
 **Method**: `POST`  
 **Sample Payload**:
@@ -62,7 +62,7 @@ iOS App Frontend Repo - [Faysal-Kuet/virtual_CR: CSE 3218 Lab Assignment 1](http
 
 ```
 
-### Route: `/add-notice`
+- ### Route: `/add-notice`
 
 **Method**: `POST`  
 **Sample Payload**:
