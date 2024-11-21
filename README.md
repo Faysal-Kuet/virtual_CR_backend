@@ -1,6 +1,6 @@
 # Virtual CR Backend
 
-Simple Node.js server with Sqlite3 database to store and view CT announcements and Notices. 
+Simple Node.js server with Sqlite3 database to store and view CT announcements and Notices. <br>
 iOS App Frontend Repo - [Faysal-Kuet/virtual_CR: CSE 3218 Lab Assignment 1](https://github.com/Faysal-Kuet/virtual_CR)
 
 ### Route: `/api/ct-announcements`
